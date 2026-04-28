@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adeyemo-Ojo Miracle Oluwaseun — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a3a2a;
+    --sage: #2e6b4a;
+    --mint: #4db87a;
+    --cream: #faf7f2;
+    --warm: #f0ebe0;
+    --gold: #c9952a;
+    --text: #1c1c1c;
+    --muted: #6b7280;
+    --border: #d5cfc4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--forest);
+    color: white;
+    padding: 64px 0 52px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: rgba(77,184,122,0.10);
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -40px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: rgba(201,149,42,0.08);
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tag-line {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--mint);
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .title-role {
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 28px;
+    letter-spacing: 0.3px;
+  }
+
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .contacts a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: color .2s;
+  }
+  .contacts a:hover { color: var(--mint); }
+  .contacts a svg { flex-shrink: 0; }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .badge {
+    background: rgba(77,184,122,0.15);
+    border: 1px solid rgba(77,184,122,0.35);
+    color: var(--mint);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── SECTIONS ── */
+  main { padding: 56px 0 80px; }
+
+  section { margin-bottom: 56px; }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+
+  /* ── ABOUT ── */
+  .about-text {
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: #3d4451;
+    max-width: 780px;
+  }
+  .about-text p + p { margin-top: 14px; }
+
+  /* ── EXPERIENCE ── */
+  .exp-grid { display: grid; gap: 24px; }
+
+  .exp-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    position: relative;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .exp-card:hover {
+    box-shadow: 0 8px 28px rgba(26,58,42,0.10);
+    transform: translateY(-2px);
+  }
+  .exp-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 20px; bottom: 20px;
+    width: 3px;
+    background: linear-gradient(180deg, var(--mint), var(--sage));
+    border-radius: 0 2px 2px 0;
+  }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .exp-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--forest);
+  }
+
+  .exp-org {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--sage);
+    margin-bottom: 4px;
+  }
+
+  .exp-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 11.5px;
+    color: var(--muted);
+    background: var(--warm);
+    padding: 3px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .exp-desc {
+    font-size: 14px;
+    color: #4a5568;
+    margin-top: 12px;
+    line-height: 1.7;
+  }
+
+  .exp-bullets {
+    margin-top: 12px;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    gap: 6px;
+  }
+  .exp-bullets li {
+    font-size: 13.5px;
+    color: #4a5568;
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .exp-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--mint);
+    font-size: 12px;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .skill-group {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .skill-group h3 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--sage);
+    margin-bottom: 12px;
+  }
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .skill-tag {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12.5px;
+  }
+
+  /* ── PROJECTS ── */
+  .proj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 20px;
+  }
+
+  .proj-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 26px 28px;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .proj-card:hover {
+    box-shadow: 0 8px 24px rgba(26,58,42,0.09);
+    transform: translateY(-2px);
+  }
+
+  .proj-icon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--sage), var(--mint));
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+
+  .proj-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 8px;
+  }
+
+  .proj-card p {
+    font-size: 13.5px;
+    color: #4a5568;
+    line-height: 1.65;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .edu-card + .edu-card { margin-top: 14px; }
+  .edu-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: var(--forest);
+    margin-bottom: 4px;
+  }
+  .edu-inst {
+    font-size: 13.5px;
+    color: var(--sage);
+    font-weight: 500;
+  }
+  .edu-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 11.5px;
+    color: var(--muted);
+    background: var(--warm);
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  /* ── AFFILIATIONS ── */
+  .affil-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .affil-chip {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 13.5px;
+    color: var(--forest);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .affil-chip span { color: var(--mint); font-size: 16px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--forest);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 28px;
+    font-size: 12.5px;
+    letter-spacing: 0.3px;
+  }
+  footer strong { color: var(--mint); }
+
+  @media (max-width: 640px) {
+    .container { padding: 0 20px; }
+    header { padding: 44px 0 38px; }
+    .proj-grid { grid-template-columns: 1fr; }
+    .exp-header { flex-direction: column; }
+  }
+
+  @media print {
+    .exp-card:hover, .proj-card:hover { transform: none; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <div class="container">
+    <p class="tag-line">Professional Portfolio</p>
+    <h1>Adeyemo-Ojo Miracle<br>Oluwaseun</h1>
+    <p class="title-role">Program Manager &nbsp;·&nbsp; Community Manager &nbsp;·&nbsp; Soil Scientist &amp; AgriPolicy Advocate</p>
+
+    <div class="contacts">
+      <a href="mailto:miracleadeyemoojo@gmail.com">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        miracleadeyemoojo@gmail.com
+      </a>
+      <a href="https://wa.me/2347016411990">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        +234 701 641 1990 (WhatsApp)
+      </a>
+      <a href="https://linkedin.com/in/oluwaseun-adeyemo-ojo" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn Profile
+      </a>
+      <a href="#">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Nigeria
+      </a>
+    </div>
+
+    <div class="badges">
+      <span class="badge">Program Management</span>
+      <span class="badge">Community Building</span>
+      <span class="badge">Soil Science</span>
+      <span class="badge">AgriPolicy</span>
+      <span class="badge">EdTech</span>
+      <span class="badge">Scholarship Access</span>
+      <span class="badge">STEM Education</span>
+      <span class="badge">Freelance Writing</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══ MAIN ══ -->
+<main>
+  <div class="container">
+
+    <!-- ABOUT -->
+    <section>
+      <p class="section-label">About</p>
+      <div class="about-text">
+        <p>I am a Program Manager, Community Builder, and Soil Scientist who sits at the intersection of agricultural science, policy, and people-centred leadership. With a foundation built across technical research, STEM instruction, virtual assistance, and freelance writing since 2019, I have developed a rare capacity to manage complex programmes while simultaneously building communities that educate and empower.</p>
+        <p>My work is driven by a belief that access to information — whether about sustainable agriculture, land resources, or scholarship opportunities — should not be a privilege. I translate that belief into structured programmes, engaged communities, and content that meets people where they are.</p>
+        <p>I am currently expanding into agricultural policy through the <strong>AgriImpact Policy Lab</strong> (School of Agricultural Policy, Cohort 1), deepening my ability to influence systems as well as communities.</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+      <p class="section-label">Experience</p>
+      <div class="exp-grid">
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Program Manager</div>
+              <div class="exp-org">Eltechra</div>
+            </div>
+            <span class="exp-date">Current</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Lead end-to-end programme coordination across technology-driven initiatives, managing timelines, stakeholder communications, and deliverable tracking.</li>
+            <li>Develop and implement structured project frameworks that align team operations with organisational goals.</li>
+            <li>Produce detailed programme documentation, reports, and performance narratives for leadership and external stakeholders.</li>
+            <li>Facilitate cross-functional collaboration between technical and non-technical teams to ensure seamless execution.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Community Manager</div>
+              <div class="exp-org">Projexa Hub</div>
+            </div>
+            <span class="exp-date">Current</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Manage and grow an active professional community, curating engagement strategies that foster knowledge-sharing and member retention.</li>
+            <li>Design community programmes, events, and structured interactions that align with organisational mission and member needs.</li>
+            <li>Serve as the primary point of contact for community members, maintaining a responsive and inclusive environment.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Founder &amp; Community Manager</div>
+              <div class="exp-org">Scholarship Opportunities Hub (WhatsApp Community)</div>
+            </div>
+            <span class="exp-date">2024 – Present</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Founded and managed a structured WhatsApp-based scholarship education community serving African students pursuing local and international postgraduate funding.</li>
+            <li>Designed and delivered a 90-day daily content programme covering scholarship discovery, application methodology, financial documentation, and advanced award strategies (Rhodes, Marshall, Gates Cambridge, Knight-Hennessy, Schwarzman).</li>
+            <li>Crafted a 12-month scholarship planning calendar tailored to the 2025–26 funding cycle.</li>
+            <li>Maintained a consistent community voice balancing practical guidance, emotional support, and engagement — onboarding and personally welcoming dozens of members.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">STEM Instructor</div>
+              <div class="exp-org">Innovate STEM</div>
+            </div>
+            <span class="exp-date">Previous</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Delivered engaging STEM instruction programmes designed to build scientific curiosity and critical thinking in young learners.</li>
+            <li>Developed age-appropriate curriculum content and lesson materials aligned with programme learning outcomes.</li>
+            <li>Supported programme management activities including scheduling, learner progress tracking, and reporting.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Volunteer Lead</div>
+              <div class="exp-org">Olufunke Adebanji Egbeyemi Foundation</div>
+            </div>
+            <span class="exp-date">Previous</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Coordinated volunteer activities and community engagement initiatives in alignment with the foundation's mission.</li>
+            <li>Supported the planning and execution of outreach events, maintaining clear communication across team members and beneficiaries.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Virtual Assistant &amp; Freelance Writer</div>
+              <div class="exp-org">Independent (Self-employed)</div>
+            </div>
+            <span class="exp-date">2019 – Present</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Provided remote administrative, research, and content support to multiple clients across diverse industries over five+ years.</li>
+            <li>Produced long-form written content including technical articles, professional bios, community guides, and educational materials.</li>
+            <li>Managed client communications, calendar coordination, data entry, and project reporting with minimal supervision.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY PROJECTS -->
+    <section>
+      <p class="section-label">Key Projects</p>
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <div class="proj-icon">📚</div>
+          <h3>90-Day Scholarship Education Programme</h3>
+          <p>Designed and led a comprehensive 90-day WhatsApp content programme for the Scholarship Opportunities Hub — covering scholarship discovery, application writing, funding documentation, and advanced award strategies. Structured with recurring weekly formats and a 12-month planning calendar for African students.</p>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-icon">🌱</div>
+          <h3>102-Day LinkedIn Soil Science Content Calendar</h3>
+          <p>Conceptualised and executed a 102-day personal brand content calendar on LinkedIn focused on soil science and land resources management. Delivered structured daily posts across fixed weekly themes — from Monday Motivation to niche technical content — building professional visibility in agri-science.</p>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-icon">🏛️</div>
+          <h3>AgriImpact Policy Lab — Cohort 1</h3>
+          <p>Accepted into the inaugural cohort of the School of Agricultural Policy under AgriImpact Policy Lab, deepening expertise in agricultural policy analysis, stakeholder engagement, and systems-level advocacy for sustainable food systems.</p>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-icon">🎯</div>
+          <h3>LinkedIn Profile Optimisation Service</h3>
+          <p>Developed a client-facing freelance offering for LinkedIn profile optimisation — including headline crafting, about section rewrites, experience positioning, and personal branding strategy — targeting professionals seeking career visibility and credibility.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <p class="section-label">Skills</p>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3>Programme Management</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Project Coordination</span>
+            <span class="skill-tag">Stakeholder Management</span>
+            <span class="skill-tag">Reporting &amp; Documentation</span>
+            <span class="skill-tag">Timeline Management</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Community Management</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Community Building</span>
+            <span class="skill-tag">Engagement Strategy</span>
+            <span class="skill-tag">Content Calendaring</span>
+            <span class="skill-tag">Member Onboarding</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Agricultural Science</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Soil Science</span>
+            <span class="skill-tag">Precision Farming</span>
+            <span class="skill-tag">Land Resources</span>
+            <span class="skill-tag">Agritech</span>
+            <span class="skill-tag">Agricultural Policy</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Content &amp; Communication</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Technical Writing</span>
+            <span class="skill-tag">Freelance Writing</span>
+            <span class="skill-tag">LinkedIn Strategy</span>
+            <span class="skill-tag">Personal Branding</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>EdTech &amp; Mentoring</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">STEM Instruction</span>
+            <span class="skill-tag">Scholarship Coaching</span>
+            <span class="skill-tag">Curriculum Design</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Operations</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Virtual Assistance</span>
+            <span class="skill-tag">Research</span>
+            <span class="skill-tag">Calendar Management</span>
+            <span class="skill-tag">Data Entry</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <p class="section-label">Education &amp; Training</p>
+
+      <div class="edu-card">
+        <div>
+          <h3>School of Agricultural Policy — Cohort 1</h3>
+          <div class="edu-inst">AgriImpact Policy Lab</div>
+        </div>
+        <span class="edu-date">2024 – Present</span>
+      </div>
+
+      <div class="edu-card">
+        <div>
+          <h3>B.Sc. Soil Science</h3>
+          <div class="edu-inst">University (Nigeria)</div>
+        </div>
+        <span class="edu-date">Completed</span>
+      </div>
+
+    </section>
+
+    <!-- AFFILIATIONS -->
+    <section>
+      <p class="section-label">Affiliations &amp; Communities</p>
+      <div class="affil-list">
+        <div class="affil-chip"><span>🏢</span> Eltechra</div>
+        <div class="affil-chip"><span>🌐</span> Projexa Hub</div>
+        <div class="affil-chip"><span>📖</span> Innovate STEM</div>
+        <div class="affil-chip"><span>🤝</span> Olufunke Adebanji Egbeyemi Foundation</div>
+        <div class="affil-chip"><span>🌱</span> AgriImpact Policy Lab</div>
+        <div class="affil-chip"><span>🎓</span> Scholarship Opportunities Hub</div>
+      </div>
+    </section>
+
+    <!-- WHAT I BRING -->
+    <section>
+      <p class="section-label">What I Bring</p>
+      <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap:16px;">
+        <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px 24px;">
+          <div style="font-size:24px; margin-bottom:10px;">🧭</div>
+          <div style="font-weight:600; color:var(--forest); margin-bottom:6px; font-size:15px;">Structure in Complexity</div>
+          <div style="font-size:13px; color:#4a5568; line-height:1.6;">I build systems — content calendars, community frameworks, programme documentation — that turn ambiguous goals into clear, executable plans.</div>
+        </div>
+        <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px 24px;">
+          <div style="font-size:24px; margin-bottom:10px;">🤝</div>
+          <div style="font-weight:600; color:var(--forest); margin-bottom:6px; font-size:15px;">People-Centred Leadership</div>
+          <div style="font-size:13px; color:#4a5568; line-height:1.6;">My leadership is transparent and vulnerable. I share knowledge generously, welcome people warmly, and lead communities with both rigour and heart.</div>
+        </div>
+        <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px 24px;">
+          <div style="font-size:24px; margin-bottom:10px;">🌍</div>
+          <div style="font-weight:600; color:var(--forest); margin-bottom:6px; font-size:15px;">African Context Fluency</div>
+          <div style="font-size:13px; color:#4a5568; line-height:1.6;">My work is built for and with African communities — from scholarship navigation to agricultural policy — with sensitivity to local realities and global ambitions.</div>
+        </div>
+        <div style="background:white; border:1px solid var(--border); border-radius:12px; padding:22px 24px;">
+          <div style="font-size:24px; margin-bottom:10px;">✍🏾</div>
+          <div style="font-weight:600; color:var(--forest); margin-bottom:6px; font-size:15px;">Cross-Disciplinary Depth</div>
+          <div style="font-size:13px; color:#4a5568; line-height:1.6;">A soil scientist who writes, manages programmes, builds communities, and navigates policy — I bring breadth without sacrificing depth in any single domain.</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <strong>Adeyemo-Ojo Miracle Oluwaseun</strong> &nbsp;·&nbsp; Program Manager &amp; Community Manager &nbsp;·&nbsp;
+  <a href="mailto:miracleadeyemoojo@gmail.com" style="color:var(--mint); text-decoration:none;">miracleadeyemoojo@gmail.com</a> &nbsp;·&nbsp;
+  +234 701 641 1990
+</footer>
+
+</body>
+</html>
